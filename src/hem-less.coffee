@@ -30,4 +30,4 @@ require.extensions['.less'] = (module, filename) ->
   module._compile("module.exports = #{JSON.stringify(source)}", filename)
 
 module.exports =
-    compiler: compiler
+  compiler: compiler

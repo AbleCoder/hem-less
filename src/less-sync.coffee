@@ -1,3 +1,5 @@
+# This was heavily influenced by this less.js pull request:
+# https://github.com/fson/less.js/commit/e21ddb74de6017cbce7a9cf1f3406697b98774ec
 {dirname, join} = require('path')
 fs              = require('fs')
 less            = require('less')
