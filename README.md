@@ -42,4 +42,7 @@ Node/CommonJS/Web Apps).
     hem.exec(argv[0]);
     ```
 
-1. Use it! Now when you run `hem bundle` or `hem server` in your project root it will generate CSS using the LESS  compiler if there is a `index.less` file in your project's css dir.
+1. Use it! Now when you run hem in your project root it will generate CSS using the LESS  compiler
+   if there is a `index.less` file in your project's css dir. For example to bunlde your app run:
+
+    ```hem bundle```
