@@ -46,3 +46,6 @@ Node/CommonJS/Web Apps).
    if there is a `index.less` file in your project's css dir. For example to bunlde your app run:
 
     ```hem bundle```
+
+    Or run the development server:
+    ```hem server```
