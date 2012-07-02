@@ -32,20 +32,28 @@ Node/CommonJS/Web Apps).
     ```
 
 1. Add a `slug.js` file to the root of your project with the following:
-
+  
     ```
-    var hem  = new (require('hem'));
-    var argv = process.argv.slice(2);
-
-    hem.compilers.less = require('hem-less').compiler;
-
-    hem.exec(argv[0]);
+    var hem = new (require('hem'));
+    var command = process.argv.slice(2)[0];
+    var less = require('hem-less');
+    var options = {
+      "server": {
+        compress: false
+      },
+      "build": {
+        compress: true
+      }
+    };
+    less.setOptions(options[command]);
+    hem.compilers.less = less.compiler;
+    hem.exec(command);
     ```
 
-1. Use it! Now when you run hem in your project root it will generate CSS using the LESS  compiler
-   if there is a `index.less` file in your project's css dir. For example to bunlde your app run:
+1. Use it! Now when you run hem in your project root it will generate CSS using the LESS compiler
+   if there is a `index.less` file in your project's css dir. For example to build your app run:
 
-    ```hem bundle```
+    ```hem build```
 
     Or run the development server:
 

@@ -1,14 +1,21 @@
-{dirname} = require('path')
+path      = require('path')
+{dirname} = path
 fs        = require('fs')
 less      = require('./less-sync')
 util      = require('util')
+options   = undefined
+
+setOptions = (o) ->
+  options = o;
 
 # less compiler
-compiler = (path) ->
-  content = fs.readFileSync path, 'utf8'
+compiler = (filepath) ->
+  content = fs.readFileSync filepath, 'utf8'
   output  = ''
+  options = options or {}
+  options.paths = [dirname(filepath)]
 
-  less.render content, paths: [dirname(path)], (e, css) =>
+  less.render content, options, (e, css) =>
     throw e if e
     output = css
 
@@ -31,3 +38,4 @@ require.extensions['.less'] = (module, filename) ->
 
 module.exports =
   compiler: compiler
+  setOptions: setOptions
