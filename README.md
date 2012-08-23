@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/AbleCoder/hem-less.png)](http://travis-ci.org/AbleCoder/hem-less)
 # hem-less
 
 This module adds LESS (The Dynamic Stylesheet language) support to hem (Bundler for
