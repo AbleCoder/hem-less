@@ -6,7 +6,7 @@ util      = require('util')
 options   = undefined
 
 setOptions = (o) ->
-  options = o;
+  options = o
 
 # less compiler
 compiler = (filepath) ->

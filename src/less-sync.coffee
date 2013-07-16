@@ -5,7 +5,9 @@ fs              = require('fs')
 less            = require('less')
 
 # monkey patch LESS to read files synchronously
-less.Parser.importer = (file, paths, callback, env) ->
+less.Parser.importer = (file, currentFileInfo, callback, env) ->
+  paths = env.paths
+
   parseFile = (e, data) ->
     return callback(e)  if e
 
