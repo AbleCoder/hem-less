@@ -1,14 +1,14 @@
 {
   "name": "hem-less",
   "description": "This module adds LESS (The Dynamic Stylesheet language) support to hem (Bundler for Node/CommonJS/Web Apps)",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "keywords": ["hem", "less", "css"],
   "repository": {
     "type": "git",
     "url": "git://github.com/AbleCoder/hem-less.git"
   },
   "dependencies": {
-    "less": "~1.3.0"
+    "less": "~1.4.0"
   },
   "licenses": [{
     "type": "MIT",
