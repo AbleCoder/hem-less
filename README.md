@@ -14,7 +14,7 @@ Node/CommonJS/Web Apps).
       "dependencies": {
         "serveup": "~0.0.4",
         "hem": "~0.1.7",
-        "hem-less": "~0.0.1",
+        "hem-less": "~0.1.0",
         "es5-shimify": "~0.0.1",
         "json2ify": "~0.0.1",
         "jqueryify": "~0.0.1",
