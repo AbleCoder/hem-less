@@ -23,8 +23,8 @@
   },
   "author": {
     "name": "AbleCoder",
-    "email": "an.able.coder@gmail.com",
-    "web": "http://AbleCoder.com"
+    "email": "coder@able.cd",
+    "web": "http://able.cd"
   },
   "main": "./lib/hem-less.js"
 }
