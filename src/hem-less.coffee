@@ -13,7 +13,10 @@ compiler = (filepath) ->
   content = fs.readFileSync filepath, 'utf8'
   output  = ''
   options = options or {}
-  options.paths = [dirname(filepath)]
+  if not options.paths
+    options.paths = [dirname(filepath)]
+  else
+    options.paths.push(dirname(filepath))
 
   less.render content, options, (e, css) =>
     throw e if e
