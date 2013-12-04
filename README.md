@@ -38,15 +38,16 @@ Node/CommonJS/Web Apps).
     var command = process.argv.slice(2)[0];
     var less = require('hem-less');
     var options = {
-      "server": {
-        compress: false
-      },
-      "build": {
-        compress: true
-      }
+      "server": false,
+      "build": true
     };
-    less.setOptions(options[command]);
+    options = {
+    	compress: options[command],
+    	paths: ['some/path', 'some/path/child' ]
+    }
+    less.setOptions(options);
     hem.compilers.less = less.compiler;
+    hem.compilers.styl = null;
     hem.exec(command);
     ```
 
